@@ -3,15 +3,15 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 
-export const getStaticPaths = async () => {
+// export const getStaticPaths = async () => {
 
-    return {
-        paths: [],
-        fallback: false
-    }
-}
+//     return {
+//         paths: [],
+//         fallback: false
+//     }
+// }
 
-export const getStaticProps = async ({ params }) => {
+export const getServerSideProps = async ({ params }) => {
 
     let data = await fetch('http://universities.hipolabs.com/search?country=Bangladesh')
     let x = await data.json()
