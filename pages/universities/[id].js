@@ -2,6 +2,7 @@ import Layout from '@/components/layout'
 import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
+import { Card } from 'reactstrap'
 
 // export const getStaticPaths = async () => {
 
@@ -34,12 +35,14 @@ export default function Details({ data }) {
             <Head>
                 <title>{data.name}</title>
             </Head>
-            <div>
-                <div style={{ border: '2px black dotted', display: 'inline-block', padding:'20px', margin: '50px 0px' }}>
-                    <h2>{data.name}</h2>
-                    <Link href={`${data.web_pages}`}>{data.web_pages}</Link>
-                    <h5>{data.country}</h5>
-                </div>
+            <div className='text-center mt-5 p-5'>
+                <Card className='my-5 p-5 d-inline-block shadow-lg'>
+                    <div>
+                        <h2>{data.name}</h2>
+                        <h5><Link className="d-block mt-4" href={`${data.web_pages}`}>{data.web_pages}</Link></h5>
+                        <h5 className='mt-4'>{data.country}</h5>
+                    </div>
+                </Card>
             </div>
         </Layout>
     )

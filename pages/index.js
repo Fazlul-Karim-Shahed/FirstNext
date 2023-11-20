@@ -17,7 +17,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Link href='/universities/all-uni'>See all universities in Bangladesh</Link>
+        <div className='text-center my-5 py-5'>
+          <Link className='h4' href='/universities'>See all universities in Bangladesh</Link>
+        </div>
       </main>
     </Layout>
   )
